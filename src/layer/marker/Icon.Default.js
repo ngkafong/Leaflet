@@ -1,6 +1,7 @@
 import {Icon} from './Icon.js';
 import * as DomUtil from '../../dom/DomUtil.js';
-
+import marker from '../../images/marker.svg';
+import markerShadow from '../../images/marker-shadow.svg';
 /*
  * @miniclass Icon.Default (Icon)
  * @aka L.Icon.Default
@@ -20,9 +21,9 @@ import * as DomUtil from '../../dom/DomUtil.js';
 export const IconDefault = Icon.extend({
 
 	options: {
-		iconUrl:       'marker-icon.png',
-		iconRetinaUrl: 'marker-icon-2x.png',
-		shadowUrl:     'marker-shadow.png',
+		iconUrl:       marker,
+		iconRetinaUrl: marker,
+		shadowUrl:     markerShadow,
 		iconSize:    [25, 41],
 		iconAnchor:  [12, 41],
 		popupAnchor: [1, -34],
@@ -31,9 +32,9 @@ export const IconDefault = Icon.extend({
 	},
 
 	_getIconUrl(name) {
-		if (typeof IconDefault.imagePath !== 'string') {	// Deprecated, backwards-compatibility only
-			IconDefault.imagePath = this._detectIconPath();
-		}
+		// if (typeof IconDefault.imagePath !== 'string') {	// Deprecated, backwards-compatibility only
+		// 	IconDefault.imagePath = this._detectIconPath();
+		// }
 
 		// @option imagePath: String
 		// `Icon.Default` will try to auto-detect the location of the
